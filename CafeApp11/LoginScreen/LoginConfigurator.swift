@@ -7,23 +7,16 @@
 
 import UIKit
 
-class LoginConfigurator: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class LoginConfigurator {
+    static func config() -> UIViewController {
+        let view = LoginView()
+        let presenter = LoginPresenter()
+        view.presenter = presenter
+        presenter.view = view
+        
+        return view
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

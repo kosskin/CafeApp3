@@ -7,23 +7,33 @@
 
 import UIKit
 
-class OrderPresenter: UIViewController {
+protocol OrderPresenterProtocol {
+ //dodelat functions
+    func tapGetBillButton(name: String, amount: Int, table: Int)
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+final class OrderPresenter: OrderPresenterProtocol {
+    var view: OrderView?
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tapGetBillButton(name: String, amount: Int, table: Int) {
+        if name.count < 5 {
+            view?.showAlert(message: "Слишком короткое имя")
+            return
+        }
+        if amount < 1 || amount > 10 {
+            view?.showAlert(message: "Введено некорректное количество гостей")
+            return
+        }
+        if table < 0 || table > 20 {
+            view?.showAlert(message: "У нас нет такого стола!")
+            return
+        }
+        
+        showNextVC()
+        //далее переход функцию вызывать??
     }
-    */
-
+    func showNextVC() {
+        let vc = BillConfigurator.config()
+        view?.present(vc, animated: true, completion: nil)
+    }
 }

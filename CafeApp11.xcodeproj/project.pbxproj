@@ -14,7 +14,15 @@
 		BB2E584B2876B122002B2542 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2E58492876B122002B2542 /* LaunchScreen.storyboard */; };
 		BB2E58592876B2DD002B2542 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E58582876B2DD002B2542 /* LoginView.swift */; };
 		BB2E585D2876B31B002B2542 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E585C2876B31B002B2542 /* LoginPresenter.swift */; };
-		BB2E586E2876BB35002B2542 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E586D2876BB35002B2542 /* KeyChainService.swift */; };
+		BB2E586E2876BB35002B2542 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E586D2876BB35002B2542 /* LoginService.swift */; };
+		BB2E587728770B59002B2542 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E587628770B59002B2542 /* OrderView.swift */; };
+		BB2E58802878370E002B2542 /* BillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E587F2878370E002B2542 /* BillView.swift */; };
+		BB2E5883287870E8002B2542 /* BillPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E5882287870E8002B2542 /* BillPresenter.swift */; };
+		BB2E588628787108002B2542 /* OrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E588528787108002B2542 /* OrderPresenter.swift */; };
+		BB2E5889287877EC002B2542 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E5888287877EC002B2542 /* LoginConfigurator.swift */; };
+		BB378A9F2886FC4D002C58EA /* BillConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB378A9E2886FC4D002C58EA /* BillConfigurator.swift */; };
+		BB653BC5287DBE49001BA008 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB653BC4287DBE49001BA008 /* LoginModel.swift */; };
+		BB83536A28859C6000115668 /* OrderConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB83536928859C6000115668 /* OrderConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +37,15 @@
 		BB2E584C2876B122002B2542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB2E58582876B2DD002B2542 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BB2E585C2876B31B002B2542 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		BB2E586D2876BB35002B2542 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		BB2E586D2876BB35002B2542 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		BB2E587628770B59002B2542 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		BB2E587F2878370E002B2542 /* BillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillView.swift; sourceTree = "<group>"; };
+		BB2E5882287870E8002B2542 /* BillPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillPresenter.swift; sourceTree = "<group>"; };
+		BB2E588528787108002B2542 /* OrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPresenter.swift; sourceTree = "<group>"; };
+		BB2E5888287877EC002B2542 /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
+		BB378A9E2886FC4D002C58EA /* BillConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillConfigurator.swift; sourceTree = "<group>"; };
+		BB653BC4287DBE49001BA008 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		BB83536928859C6000115668 /* OrderConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				BB2E58542876B199002B2542 /* LoginScreen */,
+				BB2E587228770B14002B2542 /* OrderScreen */,
+				BB2E587B2878369D002B2542 /* BillScreen */,
 				BB2E58532876B179002B2542 /* Services */,
 				BB2E583E2876B11E002B2542 /* AppDelegate.swift */,
 				BB2E58402876B11E002B2542 /* SceneDelegate.swift */,
@@ -96,7 +114,7 @@
 		BB2E58532876B179002B2542 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BB2E586D2876BB35002B2542 /* KeyChainService.swift */,
+				BB2E586D2876BB35002B2542 /* LoginService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -104,8 +122,9 @@
 		BB2E58542876B199002B2542 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				BB2E58572876B229002B2542 /* Presenter */,
+				BB2E5888287877EC002B2542 /* LoginConfigurator.swift */,
 				BB2E58562876B1FA002B2542 /* Model */,
+				BB2E58572876B229002B2542 /* Presenter */,
 				BB2E58552876B1D1002B2542 /* View */,
 			);
 			path = LoginScreen;
@@ -122,6 +141,7 @@
 		BB2E58562876B1FA002B2542 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB653BC4287DBE49001BA008 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +152,66 @@
 				BB2E585C2876B31B002B2542 /* LoginPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BB2E587228770B14002B2542 /* OrderScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BB83536928859C6000115668 /* OrderConfigurator.swift */,
+				BB2E587528770B3C002B2542 /* Presenter */,
+				BB2E587428770B37002B2542 /* View */,
+				BB2E587328770B2A002B2542 /* Model */,
+			);
+			path = OrderScreen;
+			sourceTree = "<group>";
+		};
+		BB2E587328770B2A002B2542 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB2E587428770B37002B2542 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB2E587628770B59002B2542 /* OrderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB2E587528770B3C002B2542 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BB2E588528787108002B2542 /* OrderPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BB2E587B2878369D002B2542 /* BillScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BB378A9E2886FC4D002C58EA /* BillConfigurator.swift */,
+				BB2E587E287836EE002B2542 /* View */,
+				BB2E587D287836E6002B2542 /* Presenter */,
+			);
+			path = BillScreen;
+			sourceTree = "<group>";
+		};
+		BB2E587D287836E6002B2542 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BB2E5882287870E8002B2542 /* BillPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BB2E587E287836EE002B2542 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB2E587F2878370E002B2542 /* BillView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +328,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2E585D2876B31B002B2542 /* LoginPresenter.swift in Sources */,
+				BB2E5883287870E8002B2542 /* BillPresenter.swift in Sources */,
 				BB2E583F2876B11E002B2542 /* AppDelegate.swift in Sources */,
-				BB2E586E2876BB35002B2542 /* KeyChainService.swift in Sources */,
+				BB653BC5287DBE49001BA008 /* LoginModel.swift in Sources */,
+				BB378A9F2886FC4D002C58EA /* BillConfigurator.swift in Sources */,
+				BB2E586E2876BB35002B2542 /* LoginService.swift in Sources */,
+				BB83536A28859C6000115668 /* OrderConfigurator.swift in Sources */,
+				BB2E587728770B59002B2542 /* OrderView.swift in Sources */,
+				BB2E588628787108002B2542 /* OrderPresenter.swift in Sources */,
 				BB2E58592876B2DD002B2542 /* LoginView.swift in Sources */,
+				BB2E58802878370E002B2542 /* BillView.swift in Sources */,
+				BB2E5889287877EC002B2542 /* LoginConfigurator.swift in Sources */,
 				BB2E58412876B11E002B2542 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
